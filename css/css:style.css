@@ -1,0 +1,367 @@
+/* Old Money Color Scheme */
+:root {
+    --deep-navy: #0A1931;
+    --hunter-green: #2D5A27;
+    --burgundy: #800020;
+    --cream: #FDF6E3;
+    --off-white: #F8F8F8;
+    --charcoal-grey: #36454F;
+    --gold: #D4AF37;
+    --brass: #B5A642;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--cream);
+    color: var(--charcoal-grey);
+    line-height: 1.6;
+}
+
+/* Welcome Screen */
+.welcome-container {
+    background: linear-gradient(135deg, var(--deep-navy) 0%, var(--charcoal-grey) 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.welcome-content {
+    text-align: center;
+    color: var(--cream);
+}
+
+.logo-emblem {
+    margin-bottom: 40px;
+}
+
+.emblem-circle {
+    width: 120px;
+    height: 120px;
+    background-color: var(--gold);
+    border: 2px solid var(--cream);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.emblem-icon {
+    font-size: 48px;
+    color: var(--cream);
+}
+
+.app-title {
+    font-family: 'Garamond', serif;
+    font-size: 28px;
+    font-weight: 300;
+    letter-spacing: 4px;
+    margin-bottom: 16px;
+}
+
+.app-motto {
+    font-size: 16px;
+    font-style: italic;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    opacity: 0.9;
+}
+
+.app-subtitle {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 40px;
+}
+
+/* Buttons */
+.commence-btn {
+    background-color: var(--gold);
+    color: var(--deep-navy);
+    border: none;
+    padding: 16px 32px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 200px;
+}
+
+.commence-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+}
+
+/* Navigation */
+.nav-bar {
+    background-color: var(--off-white);
+    padding: 16px;
+    border-bottom: 1px solid rgba(54, 69, 79, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-title {
+    font-family: 'Garamond', serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--deep-navy);
+}
+
+.nav-back {
+    background: none;
+    border: none;
+    color: var(--deep-navy);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Forms */
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.form-title {
+    font-family: 'Garamond', serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--deep-navy);
+    margin-bottom: 8px;
+}
+
+.form-subtitle {
+    color: var(--charcoal-grey);
+    margin-bottom: 24px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.form-row .form-group {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--charcoal-grey);
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--off-white);
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+}
+
+/* Cards */
+.card {
+    background-color: var(--off-white);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(54, 69, 79, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.card-title {
+    font-family: 'Garamond', serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--deep-navy);
+    margin-bottom: 16px;
+}
+
+/* Dashboard */
+.dashboard {
+    padding: 20px;
+    padding-bottom: 80px;
+}
+
+.greeting {
+    font-family: 'Garamond', serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--deep-navy);
+    margin-bottom: 8px;
+}
+
+.date {
+    color: var(--charcoal-grey);
+    opacity: 0.7;
+    margin-bottom: 4px;
+}
+
+.time-display {
+    font-size: 14px;
+    color: var(--charcoal-grey);
+    opacity: 0.8;
+    margin-bottom: 24px;
+}
+
+/* Exercise Library */
+.exercise-grid {
+    display: grid;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.exercise-card {
+    background: var(--off-white);
+    border: 1px solid rgba(54, 69, 79, 0.1);
+    border-radius: 8px;
+    padding: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.exercise-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--gold);
+}
+
+.exercise-name {
+    font-weight: 600;
+    color: var(--deep-navy);
+    margin-bottom: 8px;
+}
+
+.exercise-muscle {
+    font-size: 14px;
+    color: var(--charcoal-grey);
+    opacity: 0.8;
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--off-white);
+    display: flex;
+    justify-content: space-around;
+    padding: 12px 0;
+    border-top: 1px solid rgba(54, 69, 79, 0.1);
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: var(--charcoal-grey);
+    opacity: 0.6;
+    transition: all 0.3s ease;
+    font-size: 12px;
+}
+
+.nav-item.active {
+    color: var(--gold);
+    opacity: 1;
+}
+
+.nav-icon {
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+.nav-label {
+    font-size: 12px;
+}
+
+/* Utility Classes */
+.hidden {
+    display: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt-4 {
+    margin-top: 24px;
+}
+
+.btn-primary {
+    background-color: var(--hunter-green);
+    color: var(--cream);
+    border: none;
+    padding: 16px 32px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #1e4519;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--deep-navy);
+    border: 1px solid var(--deep-navy);
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: var(--deep-navy);
+    color: var(--cream);
+}
+
+.current-date {
+    font-size: 14px;
+    color: var(--charcoal-grey);
+    opacity: 0.7;
+    margin-top: 8px;
+}
+
+.workout-time {
+    font-size: 12px;
+    color: var(--charcoal-grey);
+    opacity: 0.6;
+    margin-top: 4px;
+}
+
+.last-updated {
+    font-size: 11px;
+    color: var(--charcoal-grey);
+    opacity: 0.5;
+    text-align: right;
+}

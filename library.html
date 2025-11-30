@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise Library - Fitness in Your Pocket</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Helvetica+Neue:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="nav-bar">
+        <button class="nav-back" onclick="goBack()">← Back</button>
+        <div class="nav-title">Exercise Library</div>
+        <div style="width: 60px;"></div>
+    </div>
+
+    <div class="form-container">
+        <div class="form-group">
+            <input type="text" id="searchExercises" placeholder="Search exercises..." style="width: 100%;">
+        </div>
+
+        <div id="exerciseLibrary">
+            <!-- Exercises will be loaded here -->
+        </div>
+    </div>
+
+    <div class="bottom-nav">
+        <a href="dashboard.html" class="nav-item">
+            <span class="nav-icon">📖</span>
+            <span class="nav-label">Journal</span>
+        </a>
+        <a href="library.html" class="nav-item active">
+            <span class="nav-icon">📚</span>
+            <span class="nav-label">Library</span>
+        </a>
+        <a href="log.html" class="nav-item">
+            <span class="nav-icon">➕</span>
+            <span class="nav-label">Log</span>
+        </a>
+        <a href="profile.html" class="nav-item">
+            <span class="nav-icon">👤</span>
+            <span class="nav-label">Profile</span>
+        </a>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

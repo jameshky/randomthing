@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness in Your Pocket</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Helvetica+Neue:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="welcome-container">
+        <div class="welcome-content">
+            <div class="logo-emblem">
+                <div class="emblem-circle">
+                    <span class="emblem-icon">⚔</span>
+                </div>
+            </div>
+            
+            <h1 class="app-title">FITNESS IN YOUR POCKET</h1>
+            <p class="app-motto">Ad Perpetuem Roborem</p>
+            <p class="app-subtitle">Towards Everlasting Strength</p>
+            <p class="current-date" style="color: var(--cream); opacity: 0.6; margin-bottom: 40px;">
+                <span id="currentHKDate">30 November 2025</span>
+            </p>
+            
+            <button class="commence-btn" onclick="navigateTo('welcome.html')">
+                COMMENCE
+            </button>
+
+            <p class="current-date" style="color: var(--cream); opacity: 0.4; margin-top: 40px; font-size: 12px;">
+                Est. <span class="current-year">2025</span>
+            </p>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const app = {
+                getCurrentHKDate: function() {
+                    const now = new Date();
+                    const hkOffset = 8 * 60;
+                    const localOffset = now.getTimezoneOffset();
+                    return new Date(now.getTime() + (localOffset + hkOffset) * 60000);
+                },
+                formatHKDate: function() {
+                    const hkDate = this.getCurrentHKDate();
+                    return hkDate.toLocaleDateString('en-US', { 
+                        day: 'numeric', 
+                        month: 'long', 
+                        year: 'numeric'
+                    });
+                }
+            };
+            
+            const dateElement = document.getElementById('currentHKDate');
+            const yearElement = document.querySelector('.current-year');
+            
+            if (dateElement) dateElement.textContent = app.formatHKDate();
+            if (yearElement) yearElement.textContent = app.getCurrentHKDate().getFullYear();
+        });
+        
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>
